@@ -23,7 +23,14 @@ ENV ARTEMIS_HOME /opt/artemis
 
 RUN chmod o+x ${ARTEMIS_HOME}/bin/
 
-EXPOSE 1883 5672 8161 61613 61614 61616 
+EXPOSE  1883 \
+        5445 \
+        5672 \
+        8161 \
+        9404 \
+        61613 \
+        61614 \
+        61616 
 
 ENV ARTEMIS_DEFAULT_BROKER test
 ENV ARTEMIS_BROKER_PASSWORD test
@@ -38,5 +45,7 @@ RUN chmod o+x ${ARTEMIS_DEFAULT_BROKER_HOME}/bin/
 ENV PATH "$PATH:$ARTEMIS_DEFAULT_BROKER_HOME/bin"
 
 WORKDIR ${ARTEMIS_DEFAULT_BROKER_HOME}
+
+COPY bootstrap.xml ${ARTEMIS_DEFAULT_BROKER_HOME}/etc/bootstrap.xml
 
 ENTRYPOINT [ "artemis" , "run"]
