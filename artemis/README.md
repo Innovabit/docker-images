@@ -8,7 +8,7 @@
 
 The environment variables defined are:
 
-| Variable name | Desription | Default Value
+| Variable name | Description | Default Value
 |---|---|---|
 |ARTEMIS_DEFAULT_BROKER|The default broker name to be created.|test|
 |ARTEMIS_BROKER_USERNAME| The name of the broker user|test|
