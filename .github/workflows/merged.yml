@@ -22,3 +22,11 @@ jobs:
           file: artemis/Dockerfile
           push: true
           tags: innovabitpe/artemis:latest,innovabitpe/artemis:1.0.0.${{ github.run_number }}
+      - name: Update description
+        uses: peter-evans/dockerhub-description@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+          repository: innovabitpe/artemis
+          readme-filepath: ./artemis/README.md
+          short-description: ActiveMQ Artemis image using Linux OS.
