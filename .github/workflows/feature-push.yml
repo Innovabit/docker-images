@@ -2,7 +2,7 @@ name: Build image
 on: 
   push:
     branches:
-      - feature/
+      - 'feature/**'
 jobs:
   docker-build:
     name: Build docker images
