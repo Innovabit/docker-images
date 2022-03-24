@@ -18,6 +18,6 @@ jobs:
       - name: Publish to Docker Hub
         uses: docker/build-push-action@v2
         with:
-          context: artemis
+          file: artemis/Dockerfile
           push: true
-          tags: innovabitpe/artemis:latest
+          tags: innovabitpe/artemis:latest,innovabitpe/artemis:1.0.0.${{ github.run_number }}
