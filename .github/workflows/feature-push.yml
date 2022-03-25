@@ -10,6 +10,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Build image
+      - name: Build Artemis image
         run: docker build -t innovabit/artemis .
         working-directory: artemis
+      - name: Build dotnet6 sdk image
+        run: docker build -t innovabitpe/net6sdk .
+        working-directory: net/sdk
