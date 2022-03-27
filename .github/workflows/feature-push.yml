@@ -21,5 +21,5 @@ jobs:
         env:
           IMAGENAME: ${{ matrix.imagename }}
           WORKDIR: ${{ matrix.path }}
-        run: docker build -t $IMAGENAME .
-        working-directory: $WORKDIR
+        run: docker build -t ${{ env.IMAGENAME }} .
+        working-directory: ${{ env.WORKDIR }}
