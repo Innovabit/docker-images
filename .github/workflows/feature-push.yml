@@ -10,9 +10,9 @@ jobs:
     strategy:
       matrix:
         include:
-          - imagename: innovabit/artemis
+          - imagename: innovabitpe/artemis
             path: artemis
-          - imagename: innovabit/net6sdk
+          - imagename: innovabitpe/net6sdk
             path: net/sdk
     steps:
       - name: Checkout code
