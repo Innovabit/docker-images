@@ -6,8 +6,8 @@ RUN apk update \
     && apk add --update curl gnupg \
     && apk add --update nodejs \
     && apk add --update npm \
-    && apk add --update libretls/libretls \
-    && apk add --update krb5/krb5-libs
+    && apk add --update libretls \
+    && apk add --update krb5-libs
 
 RUN dotnet nuget locals all -c
 
