@@ -9,3 +9,5 @@ RUN apk update \
     && apk add --update git
 
 RUN dotnet nuget locals all -c
+
+RUN dotnet tool install -g dotnet-reportgenerator-globaltool
