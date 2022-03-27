@@ -7,9 +7,19 @@ jobs:
   docker-build:
     name: Build docker images
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - imagename: innovabitpe/artemis
+            path: artemis
+          - imagename: innovabitpe/net6sdk
+            path: net/sdk
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Build image
-        run: docker build -t innovabit/artemis .
-        working-directory: artemis
+        env:
+          IMAGENAME: ${{ matrix.imagename }}
+          WORKDIR: ${{ matrix.path }}
+        run: docker build -t ${{ env.IMAGENAME }} .
+        working-directory: ${{ env.WORKDIR }}
