@@ -1,4 +1,4 @@
-## ActiveMQ Artemis Image
+## Net Core 6 SDK Image
 
 ### Image
 

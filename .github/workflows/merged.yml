@@ -45,4 +45,4 @@ jobs:
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
           repository: ${{ env.IMAGENAME }}
           readme-filepath: ./${{ env.WORKDIR }}/README.md
-          short-description: ${{ env.description }}
+          short-description: ${{ env.DESCRIPTION }}
