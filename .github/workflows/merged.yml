@@ -16,6 +16,9 @@ jobs:
           - imagename: innovabitpe/net6sdk
             path: net/sdk
             description: Custom Net Core SDK 6.0
+          - imagename: innovabitpe/net6runtime
+            path: net/runtime
+            description: Custom Net Core Runtime 6.0
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
