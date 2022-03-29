@@ -16,6 +16,8 @@ jobs:
             path: net/sdk
           - imagename: innovabitpe/net6runtime
             path: net/runtime
+          - imagename: innovabitpe/net6aspnet
+            path: net/aspnet
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
